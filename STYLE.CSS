@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.titulo {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 100px;
+    color: #0A3871;
+    left: auto;
+}
+
+body {
+    background-color: white; 
+    position: relative; 
+    padding-bottom: 50px; 
+    margin: 0; 
+}
+
+.input-text::placeholder {
+    color: blue;
+}
+
+.encriptar__boton {
+    width: 400px;
+    height: 67px;
+    position: absolute;
+    top: 885px;
+    left: 240px;
+    opacity: 1;
+    z-index: 10; 
+    background-color: #0A3871;
+    color: white;
+    border: 1px solid;
+    border-radius: 24px;
+    font-family: 'inter',sans-serif;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+.encriptar__boton:hover {
+    background-color: white; 
+    color: #0A3871; 
+    border-color: #0A3871; 
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
+
+
+.desencriptar__boton {
+    width: 400px;
+    height: 67px;
+    position: absolute;
+    top: 885px; 
+    left: 700px; 
+    opacity: 1;
+    z-index: 10; 
+    background-color: white;
+    color: #0A3871;
+    border: 1px solid;
+    border-radius: 24px;
+    font-family: 'inter',sans-serif;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+.desencriptar__boton:hover {
+    background-color: #0A3871; 
+    color: white; 
+    border-color: white; 
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
+
+.copiar__boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    width: 200px; 
+    height: 50px; 
+    position: absolute; 
+    top: 755px; 
+    left: 1200px; 
+    padding: 24px 0px 25px 0px; 
+    gap: 50px; 
+    opacity: 1; 
+    border: 1px solid;
+    border-radius: 24px;
+    color: #0A3871;
+    background-color: white;
+    font-family: 'inter',sans-serif;
+    transition: all 0.3s ease;
+}
+.copiar__boton:hover {
+    background-color: #0A3871; 
+    color: white; 
+    border-color: white; 
+    cursor: pointer; 
+    transform: scale(1.05); 
+}
+.Entrar__texto {
+    width: 769px; 
+    height: 589px; 
+    position: absolute;
+    top: 168px;
+    left: 240px;
+    gap: 0px;
+    opacity: 1;
+    border: 0;
+    color: black;
+    font-size: 2.5em;
+    font-family: 'inter', sans-serif;
+    background-color: transparent;
+    resize: none; 
+    background-image: url('./img/PIZ1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 40px;
+}
+
+
+
+
+.Resultado_caja {
+    width: 336px; 
+    height: 122px; 
+    position: absolute; 
+    top: 619px; 
+    left: 1150px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    opacity: 1; 
+    font-family: 'inter',sans-serif;
+}
+
+img {
+    width: 336px;
+    height: 304px;
+    position: absolute;
+    top: 283px;
+    left: 1150px;
+    opacity: 8; 
+}
+
+@media screen and (max-width: 768px) {
+    .Entrar__texto {
+        width: 450px;
+        height: 288px;
+        top: 240px;
+        left: 60px;
+        font-size: 2.5em;
+        border: 1px solid black;   
+    }
+
+    .encriptar__boton,
+    .desencriptar__boton {
+        width: 500px; 
+        height: 67px;
+        top: 870px;
+        left: 50px; 
+        opacity: 1; 
+        position: relative;
+    }
+
+    .desencriptar__boton {
+        margin-top: 10px; 
+    }
+
+    .Resultado_caja {
+        width: 500px;
+        height: 200px;
+        top: 1150px;
+        left: 50px;
+        padding: 32px 0px 0px 0px;
+        border-radius: 32px 32px 32px 32px;
+        opacity: 1; 
+        font-size: large;
+    }
+
+    .copiar__boton {
+        width: 500px;
+        height: 50px;
+        top: 1360px;
+        left: 50px; 
+        opacity: 1;
+    }
+    img {
+        width: 50%; 
+        height: auto; 
+        position: absolute;
+        top: 450px; 
+        left: 250px; 
+        opacity: 1; 
+    }
+}

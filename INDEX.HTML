@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Añadido para diseño adaptable -->
+    <title>Encriptador de Textos</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+    <header></header>
+    <h1 class="titulo">Encriptador de Texto Alura Latam</h1>
+    <textarea class="Entrar__texto" placeholder="Ingresa el texto aquí..."></textarea>
+    <br>
+    <button class="encriptar__boton">Encriptar</button>
+    <button class="desencriptar__boton">Desencriptar</button>
+    <br>
+    <textarea class="Resultado_caja" readonly placeholder="Resultado"></textarea>
+    <br>
+    <button class="copiar__boton">Copiar</button>
+    
+    <script>
+        document.querySelector(".encriptar__boton").addEventListener("click", encriptar);
+        document.querySelector(".desencriptar__boton").addEventListener("click", desencriptar);
+        document.querySelector(".copiar__boton").addEventListener("click", copiar);
+
+        function encriptar() {
+            let texto = document.querySelector(".Entrar__texto").value;
+            
+            if (/[A-Z]/.test(texto)) {
+                alert("Solo se admiten letras minúsculas");
+                return; 
+            }
+
+            let textoEncriptado = texto.replace(/e/g, "enter")
+                                       .replace(/i/g, "imes")
+                                       .replace(/a/g, "ai")
+                                       .replace(/o/g, "ober")
+                                       .replace(/u/g, "ufat");
+            document.querySelector(".Resultado_caja").value = textoEncriptado;
+            document.querySelector(".Entrar__texto").value = ""; 
+        }
+
+        function desencriptar() {
+            let texto = document.querySelector(".Entrar__texto").value;
+            
+            if (/[A-Z]/.test(texto)) {
+                alert("Solo se admiten letras minúsculas");
+                return; 
+            }
+
+            let textoDesencriptado = texto.replace(/enter/g, "e")
+                                          .replace(/imes/g, "i")
+                                          .replace(/ai/g, "a")
+                                          .replace(/ober/g, "o")
+                                          .replace(/ufat/g, "u");
+            document.querySelector(".Resultado_caja").value = textoDesencriptado;
+            document.querySelector(".Entrar__texto").value = "";
+        }
+
+        function copiar() {
+            let texto = document.querySelector(".Resultado_caja");
+            texto.select();
+            texto.setSelectionRange(0, 99999); 
+            document.execCommand("copy");
+        }
+    </script>
+    <img src="./img/oso.jpg" alt="">
+    
+</body>
+</html>
+
